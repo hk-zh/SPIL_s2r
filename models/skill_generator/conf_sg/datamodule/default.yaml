@@ -1,0 +1,11 @@
+defaults:
+  - datasets: default
+  - proprioception_dims: robot_no_joints #robot_full
+  - observation_space: rel_acts
+_target_: skill_generator.datasets.sg_data_module.SGDataModule
+_recursive_: false
+root_data_dir: ???
+action_space: 7
+action_max: [1., 1., 1., 1., 1., 1., 1.,]
+action_min: [-1., -1., -1., -1., -1., -1., -1]
+shuffle_val: false
